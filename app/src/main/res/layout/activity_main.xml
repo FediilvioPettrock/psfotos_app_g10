@@ -10,102 +10,36 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView2"
-        android:layout_width="448dp"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#03A9F4"
+        android:background="#03254c"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        >
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="100dp"
             android:text="PSFotos"
             android:textColor="@color/white"
-            android:textSize="50dp" />
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            />
     </com.google.android.material.navigation.NavigationView>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="REGISTE-SE"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.566" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="278dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="text"
-        android:windowSoftInputMode="adjustNothing"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.602"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
-
-        app:layout_constraintVertical_bias="0.426" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="279dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="Palavra Passe"
-        android:inputType="textPassword"
-
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        android:windowSoftInputMode="adjustNothing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline11"
-        app:layout_constraintVertical_bias="0.218" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="145dp"
-        android:layout_height="41dp"
-        android:text=" NO MELHOR APP DE GESTÃO DE FOTOS"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="0.263" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="REGISTAR"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.318" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="JÁ TEM UMA CONTA? CLIQUE AQUI PARA ENTRAR"
-        android:textColor="#ff6750a4"
+        android:textColor="#03254c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -121,9 +55,10 @@
         android:layout_height="184dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline13"
-        app:layout_constraintVertical_bias="0.043"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -131,42 +66,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="112dp" />
+        app:layout_constraintGuide_begin="113dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="211dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="279dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="382dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="416dp" />
+        app:layout_constraintGuide_begin="272dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="602dp" />
+        app:layout_constraintGuide_begin="578dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline14"
@@ -174,5 +88,77 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="800dp" />
+
+    <LinearLayout
+        android:layout_width="404dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.487">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="REGISTE-SE"
+            android:textColor="#03254c"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="145dp"
+            android:layout_height="41dp"
+            android:text=" NO MELHOR APP DE GESTÃO DE FOTOS"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="268dp"
+
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9">
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="278dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Nome"
+            android:inputType="text"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="278dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Palavra Passe"
+            android:inputType="textPassword"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#03254c"
+            android:text="REGISTAR" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
