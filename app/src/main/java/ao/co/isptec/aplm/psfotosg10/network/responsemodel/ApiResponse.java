@@ -1,4 +1,4 @@
-package ao.co.isptec.aplm.psfotosg10;
+package ao.co.isptec.aplm.psfotosg10.network.responsemodel;
 
 import java.util.List;
 

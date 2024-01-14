@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.TelaPrincipal2">
+    tools:context=".activity.TelaPesquisa">
 
 
     <com.google.android.material.navigation.NavigationView
@@ -89,11 +89,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_begin="113dp" />
 
 
     <ImageView
-        android:id="@+id/plus"
+        android:id="@+id/imageView4"
         android:layout_width="91dp"
         android:layout_height="68dp"
         android:layout_marginBottom="4dp"
@@ -102,64 +102,27 @@
 
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/plus" />
 
-    <LinearLayout
-        android:id="@+id/newalbum"
-        android:layout_width="345dp"
-        android:layout_height="243dp"
-        android:background="#dcdcdc"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="402dp"
+        android:layout_height="519dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/navigationView2">
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.121">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="200dp"
+            android:id="@+id/textViewOutput"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text="TÍTULO DO ALBUM"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:background="#D3D3D3"
+            android:text=""
+            android:textSize="20sp" />
+    </ScrollView>
 
-        <EditText
-            android:id="@+id/newalbumcamp"
-
-            android:layout_width="290dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:inputType="text" />
-
-        <Button
-            android:id="@+id/criaralbum"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="30dp"
-            android:text="Criar Album" />
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/lista"
-        android:layout_width="412dp"
-        android:layout_height="563dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"></ListView>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="640dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package ao.co.isptec.aplm.psfotosg10;
+package ao.co.isptec.aplm.psfotosg10.model;
 
 public class Album {
     private String name;
@@ -6,6 +6,8 @@ public class Album {
     private float numberOfPhotos;
     private int numberOfMembers;
 
+    private String username;
+    private int iduser;
     public String getName() {
         return name;
     }

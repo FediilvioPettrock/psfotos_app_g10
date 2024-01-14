@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/msg1120275700_4277"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
 
     <com.google.android.material.navigation.NavigationView
@@ -66,14 +66,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="113dp" />
+        app:layout_constraintGuide_begin="97dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="272dp" />
+        app:layout_constraintGuide_begin="217dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
@@ -96,10 +96,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintVertical_bias="0.487">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView5"
@@ -119,33 +119,54 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="268dp"
+        android:layout_width="409dp"
+        android:layout_height="321dp"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/name"
             android:layout_width="278dp"
             android:layout_height="40dp"
             android:layout_marginLeft="66dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Nome"
             android:inputType="text"
             android:windowSoftInputMode="adjustNothing" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/nickname"
             android:layout_width="278dp"
             android:layout_height="40dp"
             android:layout_marginLeft="66dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Apelido"
+            android:inputType="text"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="278dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="278dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="19dp"
             android:ems="10"
             android:hint="Palavra Passe"
             android:inputType="textPassword"
@@ -159,6 +180,8 @@
             android:layout_marginTop="50dp"
             android:backgroundTint="#03254c"
             android:text="REGISTAR" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

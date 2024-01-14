@@ -1,16 +1,28 @@
-package ao.co.isptec.aplm.psfotosg10;
+package ao.co.isptec.aplm.psfotosg10.network.service;
 import android.util.Log;
+
+import java.util.ArrayList;
 import java.util.List;
+
+import ao.co.isptec.aplm.psfotosg10.model.Album;
+import ao.co.isptec.aplm.psfotosg10.network.ApiService;
+import ao.co.isptec.aplm.psfotosg10.network.responsemodel.ApiResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
-public class ApiServiceGenerator {
 
-    public ApiServiceGenerator(TextView Textview, ScrollView scrollView){
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ApiServiceGenerator extends AppCompatActivity {
+
+    public ApiServiceGenerator(ArrayList<String> list,ArrayAdapter<String> adapter,ListView listView,int id){
         Retrofit retrofit= new Retrofit.Builder()
                 .baseUrl("http://10.0.2.2:8000/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -18,26 +30,19 @@ public class ApiServiceGenerator {
 
         ApiService apiService=retrofit.create(ApiService.class);
 
-        Call<ApiResponse<List<Album>>> call = apiService.getAlbum();
+        Call<ApiResponse<List<Album>>> call = apiService.getAlbum(id);
         call.enqueue(new Callback<ApiResponse<List<Album>>>() {
             @Override
             public void onResponse(Call<ApiResponse<List<Album>>> call, Response<ApiResponse<List<Album>>> response) {
+
                 if (response.isSuccessful()) {
                     ApiResponse<List<Album>> apiResponse = response.body();
                     if (apiResponse != null && apiResponse.getData() != null) {
                         List<Album> albums = apiResponse.getData();
 
                         for (Album album : albums) {
-                            appendTextToTextView("Name: " + album.getName(), Textview, scrollView);
-                            appendTextToTextView("Owner: " + album.getOwner(), Textview, scrollView);
-                            appendTextToTextView("Number Of Photos: " + album.getNumberOfPhotos(), Textview, scrollView);
-                            appendTextToTextView("Number of Members: " + album.getNumberOfMembers(), Textview, scrollView);
-                            appendTextToTextView("---------------------------------", Textview, scrollView);
-                            Log.d("GroupData", "Name: " + album.getName());
-                            Log.d("GroupData", "Owner: " + album.getOwner());
-                            Log.d("GroupData", "Number of Photos: " + album.getNumberOfPhotos());
-                            Log.d("GroupData", "Number of Members: " + album.getNumberOfMembers());
-                            Log.d("GroupData", "---------------------------------");
+                            list.add(album.getName());
+                            adapter.notifyDataSetChanged();
                         }
                     } else {
                         Log.d("GroupData", "Data is null in API response");
